@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="counter">
+		<CBX_INST_ENTRY INSTANCE_NAME="|my_counter|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_e1m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|my_counter|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_hpl.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

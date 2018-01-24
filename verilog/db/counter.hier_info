@@ -1,0 +1,135 @@
+|my_counter
+clk => clk~0.IN3
+count_up => count_up~0.IN1
+count_down => count_down~0.IN1
+segm_o1[0] <= my8bitdisplay:digitdisp.port1
+segm_o1[1] <= my8bitdisplay:digitdisp.port1
+segm_o1[2] <= my8bitdisplay:digitdisp.port1
+segm_o1[3] <= my8bitdisplay:digitdisp.port1
+segm_o1[4] <= my8bitdisplay:digitdisp.port1
+segm_o1[5] <= my8bitdisplay:digitdisp.port1
+segm_o1[6] <= my8bitdisplay:digitdisp.port1
+segm_o1[7] <= my8bitdisplay:digitdisp.port1
+segm_o2[0] <= my8bitdisplay:unitdisp.port1
+segm_o2[1] <= my8bitdisplay:unitdisp.port1
+segm_o2[2] <= my8bitdisplay:unitdisp.port1
+segm_o2[3] <= my8bitdisplay:unitdisp.port1
+segm_o2[4] <= my8bitdisplay:unitdisp.port1
+segm_o2[5] <= my8bitdisplay:unitdisp.port1
+segm_o2[6] <= my8bitdisplay:unitdisp.port1
+segm_o2[7] <= my8bitdisplay:unitdisp.port1
+
+
+|my_counter|rs_flipflop:main_rs
+r => always0~0.IN1
+r => q1~1.OUTPUTSELECT
+r => q~1.OUTPUTSELECT
+s => always0~0.IN0
+s => q1~0.OUTPUTSELECT
+s => q~0.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q1 <= q1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => q~reg0.CLK
+clk => q1~reg0.CLK
+
+
+|my_counter|my8bitdisplay:digitdisp
+value[0] => Mux6.IN13
+value[0] => Mux5.IN13
+value[0] => Mux4.IN13
+value[0] => Mux3.IN13
+value[0] => Mux2.IN13
+value[0] => Mux1.IN13
+value[0] => Mux0.IN13
+value[1] => Decoder0.IN2
+value[1] => Mux6.IN12
+value[1] => Mux5.IN12
+value[1] => Mux4.IN12
+value[1] => Mux3.IN12
+value[1] => Mux2.IN12
+value[1] => Mux1.IN12
+value[1] => Mux0.IN12
+value[2] => Decoder0.IN1
+value[2] => Mux6.IN11
+value[2] => Mux5.IN11
+value[2] => Mux4.IN11
+value[2] => Mux3.IN11
+value[2] => Mux2.IN11
+value[2] => Mux1.IN11
+value[2] => Mux0.IN11
+value[3] => Decoder0.IN0
+value[3] => Mux6.IN10
+value[3] => Mux5.IN10
+value[3] => Mux4.IN10
+value[3] => Mux3.IN10
+value[3] => Mux2.IN10
+value[3] => Mux1.IN10
+value[3] => Mux0.IN10
+result[0] <= result[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => result[7]~reg0.CLK
+clk => result[6]~reg0.CLK
+clk => result[5]~reg0.CLK
+clk => result[4]~reg0.CLK
+clk => result[3]~reg0.CLK
+clk => result[2]~reg0.CLK
+clk => result[1]~reg0.CLK
+clk => result[0]~reg0.CLK
+
+
+|my_counter|my8bitdisplay:unitdisp
+value[0] => Mux6.IN13
+value[0] => Mux5.IN13
+value[0] => Mux4.IN13
+value[0] => Mux3.IN13
+value[0] => Mux2.IN13
+value[0] => Mux1.IN13
+value[0] => Mux0.IN13
+value[1] => Decoder0.IN2
+value[1] => Mux6.IN12
+value[1] => Mux5.IN12
+value[1] => Mux4.IN12
+value[1] => Mux3.IN12
+value[1] => Mux2.IN12
+value[1] => Mux1.IN12
+value[1] => Mux0.IN12
+value[2] => Decoder0.IN1
+value[2] => Mux6.IN11
+value[2] => Mux5.IN11
+value[2] => Mux4.IN11
+value[2] => Mux3.IN11
+value[2] => Mux2.IN11
+value[2] => Mux1.IN11
+value[2] => Mux0.IN11
+value[3] => Decoder0.IN0
+value[3] => Mux6.IN10
+value[3] => Mux5.IN10
+value[3] => Mux4.IN10
+value[3] => Mux3.IN10
+value[3] => Mux2.IN10
+value[3] => Mux1.IN10
+value[3] => Mux0.IN10
+result[0] <= result[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => result[7]~reg0.CLK
+clk => result[6]~reg0.CLK
+clk => result[5]~reg0.CLK
+clk => result[4]~reg0.CLK
+clk => result[3]~reg0.CLK
+clk => result[2]~reg0.CLK
+clk => result[1]~reg0.CLK
+clk => result[0]~reg0.CLK
+
+

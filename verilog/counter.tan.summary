@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.900 ns
+From           : count_up
+To             : rs_flipflop:main_rs|q1
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 17.600 ns
+From           : my8bitdisplay:digitdisp|result[3]
+To             : segm_o1[3]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -8.900 ns
+From           : count_down
+To             : rs_flipflop:main_rs|q1
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 33.22 MHz ( period = 30.100 ns )
+From           : lpm_counter:clock_count_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[21]
+To             : lpm_counter:count_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,14 @@
+|my_counter
+clk => ~NO_FANOUT~
+count_up => rs_flipflop:rs1.s
+count_down => rs_flipflop:rs1.r
+segm_o2[0] <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|my_counter|rs_flipflop:rs1
+r => q~0.IN1
+s => q~1.IN1
+q <= comb~2
+notq <= comb~0
+
+
